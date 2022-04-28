@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+
+    <script type="text/javascript">
+      /*const mobile=document.querySelector('mobileInput').nodeValue();
+        const password=document.querySelector('passwordInput').nodeValue();
+
+          document.getElementById('btnLogin').onclick()=function(){
+          if(mobile==='0712345678'){
+              if(password==='abcd1234')
+              console.log(mobile)
+          }
+      }*/
+    </script>
+    
+  </head>
+  <body>
+    <div id="headerSection">
+      <h1>Oneline Voting System</h1>
+    </div>
+
+    <hr />
+
+    <div id="bodySection">
+      <form action="#">
+        <h2>Login</h2>
+        <input
+          type="number"
+          name="mobile"
+          id="mobileInput"
+          placeholder="Enter your mobile number here"
+        />
+        <br /><br />
+        <input
+          type="password"
+          name="password"
+          id="passwordInput"
+          placeholder="Enter your password here"
+        />
+        <br /><br />
+        <select name="role" id="dropBox">
+          <option value="1">Voter</option>
+          <option value="2">Admin</option>
+          <option value="3">Competitor</option>
+        </select>
+        <br /><br />
+        <button id="btnLogin">Login</button>
+        <br /><br />
+        New user?
+        <a href="login_role.html">Register Here</a>
+      </form>
+    </div>
+  </body>
+</html>
