@@ -28,16 +28,21 @@ input {
   width: 15%;
 }
 
-#btnLogin {
+button {
   padding: 10px;
   border-radius: 5px;
   background-color: navy;
   color: white;
 }
 
-#btnSubmit {
+#btnRegister {
   padding: 10px;
   border-radius: 5px;
   background-color: navy;
   color: white;
+}
+
+#photoInput {
+  padding: 10px;
+  border-radius: 5px;
 }
