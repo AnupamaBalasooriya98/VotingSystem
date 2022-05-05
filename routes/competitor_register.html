@@ -5,6 +5,20 @@
     <script></script>
   </head>
   <body>
+    <style>
+      #addressInput {
+        width: 30%;
+      }
+
+      #imgPart {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        width: 30%;
+        text-align: center;
+      }
+    </style>
+
     <div id="headerSection">
       <h1>Online Voting System</h1>
     </div>
@@ -14,7 +28,7 @@
     <div id="bodySection">
       <h2>Register Competitor</h2>
       <br /><br />
-      <form action="#">
+      <form action="../api/competitor_register.php" method="post">
         <input
           type="text"
           name="firstName"
@@ -34,24 +48,30 @@
           name="nic"
           placeholder="Enter NIC number"
         />
-        <input type="number" id="ageInput" name="age" placeholder="Enter age" />
+        <input type="text" id="ageInput" name="age" placeholder="Enter age" />
         <br /><br />
         <input
-          type="number"
+          type="text"
           id="mobileNumberInput"
           name="mobileNumber"
           placeholder="Enter mobile number"
         />
         <br /><br />
-        <input 
+        <input
           type="text"
           id="addressInput"
           name="address"
-          placeholder="Enter address"
+          placeholder="Enter home address"
         />
         <br /><br />
-        <input type="file" id="photoInput" name="photo" />
-        <br /><br />
+
+        <center>
+          <div id="imgPart">
+            <input type="file" id="photoInput" name="photo" />
+          </div>
+        </center>
+
+        <br />
         <input
           type="password"
           id="passwordInput"
