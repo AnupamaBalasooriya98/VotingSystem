@@ -28,7 +28,11 @@
     <div id="bodySection">
       <h2>Register Competitor</h2>
       <br /><br />
-      <form action="../api/competitor_register.php" method="post">
+      <form
+        action="../api/competitor_register.php"
+        method="POST"
+        enctype="multipart/form-data"
+      >
         <input
           type="text"
           name="firstName"

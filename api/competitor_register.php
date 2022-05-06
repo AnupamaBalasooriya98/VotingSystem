@@ -1,6 +1,6 @@
 <?php
 
-    include('connect.php');
+    include("connect.php");
 
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -8,8 +8,8 @@
     $age = $_POST['ageInput'];
     $mobile = $_POST['mobileNumberInput'];
     $address = $_POST['addressInput'];
-    $image = $_FILES['name']['photo'];
-    $tmp_name = $_FILES['tmp_name']['photo'];
+    $image = $_FILES['photo']['name'];
+    $tmp_name = $_FILES['photo']['tmp_name'];
     $password = $_POST['passwordInput'];
     $cpassword = $_POST['confirmPasswordInput'];
 
