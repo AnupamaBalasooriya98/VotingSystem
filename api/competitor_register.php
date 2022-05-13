@@ -14,7 +14,7 @@
     $cpassword = $_POST['confirmPasswordInput'];
 
     if ($password == $cpassword) {
-        move_uploaded_file($tmp_name, "../uploads/$image");
+        move_uploaded_file($tmp_name, "../images/$image");
 
         $insert = mysqli_query($connect, "INSERT INTO competitor_register (first_name, last_name, nic, age, mobile_number, home_address, dp, password) VALUES ('$firstName', '$lastName', '$nic', '$age', '$mobile', '$address', '$image', '$password')");
 
