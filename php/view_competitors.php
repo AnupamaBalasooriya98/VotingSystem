@@ -1,5 +1,5 @@
 <?php
-    include("../api/connect.php");
+    include("../php/connect.php");
     
     $result = mysqli_query($connect, "SELECT * FROM competitor_register");
 
@@ -12,8 +12,8 @@
     while($row = mysqli_fetch_array($result))
     {
         echo "<tr>";
-        echo "<td>" . $row['FirstName'] . "</td>";
-        echo "<td>" . $row['LastName'] . "</td>";
+        echo "<td>" . $row['first_name'] . "</td>";
+        echo "<td>" . $row['last_name'] . "</td>";
         echo "</tr>";
     }
     echo "</table>";

@@ -3,10 +3,18 @@
 $connect=mysqli_connect('localhost','root','', 'online_voting_system') or die('Connection failed!');
 
 if($connect) {
-    echo "Connected!";
+    echo "
+        <script>
+            alert('Connected!');
+            window.location = '#'
+        </script>";
 }
 else {
-    echo 'Not connected!';
+    echo "
+        <script>
+            alert('Not connected!');
+            window.location = '#'
+        </script>";
 }
 
 ?>
