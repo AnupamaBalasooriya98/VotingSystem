@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Online Voting System</title>
-    <link rel="stylesheet" href="css/stylesheet.css" />    
+    <link rel="stylesheet" href="css/stylesheet.css" />
   </head>
   <body>
     <div id="headerSection">
@@ -11,7 +11,7 @@
     <hr />
 
     <div id="bodySection">
-      <form action="#">
+      <form action="api/login.php">
         <h2>Login</h2>
         <input
           type="text"
@@ -27,7 +27,14 @@
           placeholder="Enter your password here"
         />
         <br /><br />
-        <button id="btnLogin">Login</button>
+        <button
+          type="submit"
+          id="btnLogin"
+          name="btnLogin"
+          href="routes/competitor_profile.html"
+        >
+          Login
+        </button>
         <br /><br />
         New user? Register Here
         <br />
@@ -35,5 +42,24 @@
         <a href="routes/competitor_register.html">Competitor</a>
       </form>
     </div>
+    <script>
+      function validation() {
+        var id = document.nic.value;
+        var ps = document.password.value;
+        if (id.length == "" && ps.length == "") {
+          alert("User Name and Password fields are empty");
+          return false;
+        } else {
+          if (id.length == "") {
+            alert("User Name is empty");
+            return false;
+          }
+          if (ps.length == "") {
+            alert("Password field is empty");
+            return false;
+          }
+        }
+      }
+    </script>
   </body>
 </html>

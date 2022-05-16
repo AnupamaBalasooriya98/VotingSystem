@@ -4,7 +4,6 @@
 
     $nic = $_POST['nic'];
     $password = $_POST['password'];
-    $role = $_POST['role'];
 
     $check = mysqli_query($connect, "SELECT * FROM competitor_register WHERE nic='$nic' AND password='$password'");
 
