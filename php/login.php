@@ -19,7 +19,7 @@
         echo "
             <script>
                 alert('Login Successfull!');
-                window.location = '../routes/competitor_profile.php'
+                window.location = '../php/competitor_profile.php'
             </script>
         ";
     }
