@@ -22,7 +22,7 @@
             echo "
                 <script>
                     alert('Registration successfull!!');
-                    window.location = '../php/competitor_register.html'
+                    window.location = '../html/competitor_register.html'
                 </script>
             ";
         }
@@ -30,7 +30,7 @@
             echo "
                 <script>
                     alert('Error occured!!');
-                    window.location = '../php/competitor_register.html'
+                    window.location = '../html/competitor_register.html'
                 </script>
             ";
         }
@@ -39,7 +39,7 @@
         echo "
             <script>
                 alert('Password and Confirm password not matching');
-                window.location = '../php/competitor_register.html'
+                window.location = '../html/competitor_register.html'
             </script>
         ";
     }

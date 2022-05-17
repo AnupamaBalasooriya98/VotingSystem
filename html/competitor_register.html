@@ -9,7 +9,6 @@
       #addressInput {
         width: 30%;
       }
-
       #imgPart {
         border: 2px solid black;
         border-radius: 5px;
@@ -17,9 +16,25 @@
         width: 30%;
         text-align: center;
       }
+      #backBtn {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: navy;
+        color: white;
+        float: left;
+      }
+      #logoutBtn {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: navy;
+        color: white;
+        float: right;
+      }
     </style>
 
     <div id="headerSection">
+      <button id="backBtn" onclick="location.href='../php/view_competitors.php'">Back</button>
+      <button id="logoutBtn" onclick="location.href='../php/login.php'">Logout</button>
       <h1>Online Voting System</h1>
     </div>
 
@@ -91,8 +106,6 @@
         <br /><br />
         <button id="btnRegister">Register</button>
         <br /><br />
-        Already registered?
-        <a href="../html/index.html">Login Here</a>
       </form>
     </div>
   </body>
