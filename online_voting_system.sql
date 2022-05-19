@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2022 at 10:32 AM
+-- Generation Time: May 19, 2022 at 07:13 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -45,7 +45,27 @@ CREATE TABLE `competitor_register` (
 --
 
 INSERT INTO `competitor_register` (`id`, `first_name`, `last_name`, `nic`, `age`, `mobile_number`, `home_address`, `dp`, `password`) VALUES
-(4, 'anupama', 'balasooriya', '123456v', 24, 123456, 'jsgdfjsdfkh', '', '123456v');
+(4, 'anupama', 'balasooriya', '123456v', 24, 123456, 'jsgdfjsdfkh', '', '123456v'),
+(10, '', '', '', 0, 0, '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `username` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -58,6 +78,12 @@ ALTER TABLE `competitor_register`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -65,7 +91,13 @@ ALTER TABLE `competitor_register`
 -- AUTO_INCREMENT for table `competitor_register`
 --
 ALTER TABLE `competitor_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
