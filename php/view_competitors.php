@@ -80,7 +80,7 @@
             echo "<td>" . $row['age'] . "</td>";
             echo "<td>" . $row['mobile_number'] . "</td>";
             echo "<td>" . $row['home_address'] . "</td>";
-            echo "<td>" . $row['dp'] . "</td>";
+            echo "<td><img src='../images/" . $row['dp'] . "' width='50' height='50'></td>";
             echo "<td>" . "<button type='submit' id='editBtn' onclick='editButton()'>Edit</button>" . "<button type='submit' id='deleteBtn' onclick='deleteButton()'>Delete</button>" . "</td>";
             echo "</tr>";
         }
