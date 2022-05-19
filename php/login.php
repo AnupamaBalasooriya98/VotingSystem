@@ -1,35 +1,84 @@
 <?php
+   include("connect.php");
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form
+      $myusername = mysqli_real_escape_string($connect,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($connect,$_POST['password']);
 
-    session_start();
-    include("connect.php");
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $check = mysqli_query($connect, "SELECT * FROM login WHERE username='$username' AND password='$password'");
-
-    if (mysqli_num_rows($check) > 0) {
-        $userdata = mysqli_fetch_array($check);
-        $groups = mysqli_query($connect, "SELECT * FROM login");
-        $groupsdata = mysqli_fetch_all($groups, MYSQLI_ASSOC);
-
-        $_SESSION['userdata'] = $userdata;
-        $_SESSION['groupsdata'] = $groupsdata;
-
-        echo "
-            <script>
-                alert('Login Successfull!');
-                window.location = '../html/admin_dashboard.html'
-            </script>
-        ";
-    }
-    else {
-        echo "
-            <script>
-                alert('Invalid credentials!');
-                window.location = '../'
-            </script>
-        ";
-    }
-
+      $sql = "SELECT * FROM login WHERE username = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($connect, $sql);
+      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+		
+        if ($myusername == "admin"){
+            header("location: ../html/admin_dashboard.html");
+        }
+        else {
+            header("location: ../");
+        }
+   }
 ?>
+
+<html>
+   <head>
+   <title>Online Voting System</title>
+    <link rel="stylesheet" href="../css/stylesheet.css" />
+      
+   </head>
+   
+   <div id="headerSection">
+      <h1>Oneline Voting System</h1>
+    </div>
+
+    <hr />
+
+    <div id="bodySection">
+      <form method = "post">
+        <h2>Login</h2>
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter your username here"
+        />
+        <br /><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password here"
+        />
+        <br /><br />
+        <button
+          type="submit"
+          name="btnLogin"
+        >
+          Login
+        </button>
+        <br /><br />
+        New user? Register Here
+        <br />
+        <a href="#">Voter</a><br />
+      </form>
+    </div>
+    
+    <script>
+      function validation() {
+        var id = document.username.value;
+        var ps = document.password.value;
+        if (id.length == "" && ps.length == "") {
+          alert("User Name and Password fields are empty");
+          return false;
+        } else {
+          if (id.length == "") {
+            alert("Username is empty");
+            return false;
+          }
+          if (ps.length == "") {
+            alert("Password field is empty");
+            return false;
+          }
+        }
+      }
+    </script>
+   </body>
+</html>
