@@ -26,6 +26,16 @@
         color: white;
         float: right;
       }
+      table td{
+          width:8em;
+          height:4em;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
     </style>
 
     <div id="headerSection">
@@ -60,6 +70,7 @@
         $var_id = mysqli_fetch_array($result)['id'];
 
         echo "<table border='1px solid black' align='center'>
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>First Name</th>
@@ -69,10 +80,12 @@
                 <th>Home Address</th>
                 <th>Image</th>
                 <th>Actions</th>
-            </tr>";
+            </tr>
+        </thead>";
 
         while($row = mysqli_fetch_array($result))
         {
+            echo "<tbody>";
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['first_name'] . "</td>";
@@ -80,9 +93,10 @@
             echo "<td>" . $row['age'] . "</td>";
             echo "<td>" . $row['mobile_number'] . "</td>";
             echo "<td>" . $row['home_address'] . "</td>";
-            echo "<td><img src='../images/" . $row['dp'] . "' width='50' height='50'></td>";
+            echo "<td><img src='../images/" . $row['dp'] . "' width='50' height='50' class='center'></td>";
             echo "<td>" . "<button type='submit' id='editBtn' onclick='editButton()'>Edit</button>" . "<button type='submit' id='deleteBtn' onclick='deleteButton()'>Delete</button>" . "</td>";
             echo "</tr>";
+            echo "</tbody>";
         }
         echo "</table>";
 
