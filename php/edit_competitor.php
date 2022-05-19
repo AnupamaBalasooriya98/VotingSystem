@@ -6,9 +6,9 @@
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $nic = $_POST['nic'];
-    $age = $_POST['ageInput'];
-    $mobile = $_POST['mobileNumberInput'];
-    $address = $_POST['addressInput'];
+    $age = $_POST['age'];
+    $mobile = $_POST['mobileNumber'];
+    $address = $_POST['address'];
     $image = $_FILES['photo']['name'];
     $tmp_name = $_FILES['photo']['tmp_name'];
 
@@ -32,6 +32,5 @@
             </script>
         ";
     }
-    echo "<script>alert(var id = '$var_id')</script>";
 
 ?>
