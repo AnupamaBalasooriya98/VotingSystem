@@ -5,7 +5,6 @@ $connect=mysqli_connect('localhost','root','', 'online_voting_system') or die('C
 if($connect) {
     echo "
         <script>
-            alert('Connected!');
             window.location = '#'
         </script>";
 }

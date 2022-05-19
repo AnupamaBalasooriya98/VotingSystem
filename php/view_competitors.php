@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Online Voting System - View Competitors</title>
@@ -70,7 +71,7 @@
             echo "<td>" . $row['mobile_number'] . "</td>";
             echo "<td>" . $row['home_address'] . "</td>";
             echo "<td>" . $row['dp'] . "</td>";
-            echo "<td>" . "<button type='submit'>Edit</button>" . "<button type='submit'>Delete</button>" . "</td>";
+            echo "<td>" . "<button type='submit' id='editBtn'>Edit</button>" . "<button type='submit' id='deleteBtn'>Delete</button>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";

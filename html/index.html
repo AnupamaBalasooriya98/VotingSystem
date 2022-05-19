@@ -15,15 +15,15 @@
         <h2>Login</h2>
         <input
           type="text"
-          name="nic"
-          id="nicInput"
-          placeholder="Enter your NIC number here"
+          name="username"
+          id="username"
+          placeholder="Enter your username here"
         />
         <br /><br />
         <input
           type="password"
           name="password"
-          id="passwordInput"
+          id="password"
           placeholder="Enter your password here"
         />
         <br /><br />
@@ -31,7 +31,7 @@
           type="submit"
           id="btnLogin"
           name="btnLogin"
-          href="../html/competitor_profile.html"
+          href="../html/admin_dashboard.html"
         >
           Login
         </button>
@@ -43,14 +43,14 @@
     </div>
     <script>
       function validation() {
-        var id = document.nic.value;
+        var id = document.username.value;
         var ps = document.password.value;
         if (id.length == "" && ps.length == "") {
           alert("User Name and Password fields are empty");
           return false;
         } else {
           if (id.length == "") {
-            alert("User Name is empty");
+            alert("Username is empty");
             return false;
           }
           if (ps.length == "") {
