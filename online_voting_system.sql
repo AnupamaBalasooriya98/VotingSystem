@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2022 at 07:13 PM
+-- Generation Time: May 19, 2022 at 08:53 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -36,17 +36,16 @@ CREATE TABLE `competitor_register` (
   `age` int(11) NOT NULL,
   `mobile_number` int(10) NOT NULL,
   `home_address` varchar(100) NOT NULL,
-  `dp` varchar(255) NOT NULL,
-  `password` varchar(10) NOT NULL
+  `dp` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `competitor_register`
 --
 
-INSERT INTO `competitor_register` (`id`, `first_name`, `last_name`, `nic`, `age`, `mobile_number`, `home_address`, `dp`, `password`) VALUES
-(4, 'anupama', 'balasooriya', '123456v', 24, 123456, 'jsgdfjsdfkh', '', '123456v'),
-(10, '', '', '', 0, 0, '', '', '');
+INSERT INTO `competitor_register` (`id`, `first_name`, `last_name`, `nic`, `age`, `mobile_number`, `home_address`, `dp`) VALUES
+(4, 'anupama', 'balasooriya', '123456v', 24, 123456, 'jsgdfjsdfkh', ''),
+(11, 'fgdg', 'gjhfg', '23445', 0, 0, '', '92-920036_nature-top-whatsapp-dp.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,13 +90,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `competitor_register`
 --
 ALTER TABLE `competitor_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
