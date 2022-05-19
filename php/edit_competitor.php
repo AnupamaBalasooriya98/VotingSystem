@@ -1,7 +1,9 @@
 <?php
 
     include("connect.php");
+    include("view_competitors.php");
 
+    $id = $_POST[$var_id];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $nic = $_POST['nic'];
@@ -13,13 +15,13 @@
 
         move_uploaded_file($tmp_name, "../images/$image");
 
-        $insert = mysqli_query($connect, "INSERT INTO competitor_register (first_name, last_name, nic, age, mobile_number, home_address, dp) VALUES ('$firstName', '$lastName', '$nic', '$age', '$mobile', '$address', '$image')");
+        $insert = mysqli_query($connect, "UPDATE competitor_register SET ('$firstName', '$lastName', '$nic', '$age', '$mobile', '$address', '$image') WHERE id='$id'");
 
         if ($insert) {
             echo "
                 <script>
-                    alert('Registration successfull!!');
-                    window.location = '../html/competitor_register.html'
+                    alert('Update successfull!!');
+                    window.location = '../html/edit_competitor.html'
                 </script>
             ";
         }
@@ -27,9 +29,10 @@
             echo "
                 <script>
                     alert('Error occured!!');
-                    window.location = '../html/competitor_register.html'
+                    window.location = '../html/edit_competitor.html'
                 </script>
             ";
         }
+        echo "<script>alert(var id = '$var_id')</script>"
 
 ?>

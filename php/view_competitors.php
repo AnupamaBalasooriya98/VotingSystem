@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Online Voting System - View Competitors</title>
@@ -45,9 +44,10 @@
     </div>
 
     <?php
-        include("../php/connect.php");
+        include("connect.php");
         
         $result = mysqli_query($connect, "SELECT * FROM competitor_register");
+        $var_id = mysqli_fetch_array($result)['id'];
 
         echo "<table border='1px solid black' align='center'>
             <tr>
@@ -71,7 +71,7 @@
             echo "<td>" . $row['mobile_number'] . "</td>";
             echo "<td>" . $row['home_address'] . "</td>";
             echo "<td>" . $row['dp'] . "</td>";
-            echo "<td>" . "<button type='submit' id='editBtn'>Edit</button>" . "<button type='submit' id='deleteBtn'>Delete</button>" . "</td>";
+            echo "<td>" . "<button type='submit' id='editBtn' href='../html/edit_competitor.html'>Edit</button>" . "<button type='submit' id='deleteBtn'>Delete</button>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";
