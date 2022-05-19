@@ -11,25 +11,25 @@
     $image = $_FILES['photo']['name'];
     $tmp_name = $_FILES['photo']['tmp_name'];
 
-        move_uploaded_file($tmp_name, "../images/$image");
+    move_uploaded_file($tmp_name, "../images/$image");
 
-        $insert = mysqli_query($connect, "INSERT INTO competitor_register (first_name, last_name, nic, age, mobile_number, home_address, dp) VALUES ('$firstName', '$lastName', '$nic', '$age', '$mobile', '$address', '$image')");
+    $insert = mysqli_query($connect, "INSERT INTO competitor_register (first_name, last_name, nic, age, mobile_number, home_address, dp) VALUES ('$firstName', '$lastName', '$nic', '$age', '$mobile', '$address', '$image')");
 
-        if ($insert) {
-            echo "
-                <script>
-                    alert('Registration successfull!!');
-                    window.location = '../html/competitor_register.html'
-                </script>
-            ";
-        }
-        else {
-            echo "
-                <script>
-                    alert('Error occured!!');
-                    window.location = '../html/competitor_register.html'
-                </script>
-            ";
-        }
+    if ($insert) {
+        echo "
+            <script>
+                alert('Registration successfull!!');
+                window.location = '../html/competitor_register.html'
+            </script>
+        ";
+    }
+    else {
+        echo "
+            <script>
+                alert('Error occured!!');
+                window.location = '../html/competitor_register.html'
+            </script>
+        ";
+    }
 
 ?>

@@ -42,6 +42,16 @@
         Add Competitor
         </button>
     </div>
+    
+    <script>
+      function editButton() {
+        location.href='../html/edit_competitor.html';
+      }
+
+      function deleteButton() {
+        location.href='../php/delete_competitor.php';
+      }
+    </script>
 
     <?php
         include("connect.php");
@@ -71,7 +81,7 @@
             echo "<td>" . $row['mobile_number'] . "</td>";
             echo "<td>" . $row['home_address'] . "</td>";
             echo "<td>" . $row['dp'] . "</td>";
-            echo "<td>" . "<button type='submit' id='editBtn' href='../html/edit_competitor.html'>Edit</button>" . "<button type='submit' id='deleteBtn'>Delete</button>" . "</td>";
+            echo "<td>" . "<button type='submit' id='editBtn' onclick='editButton()'>Edit</button>" . "<button type='submit' id='deleteBtn' onclick='deleteButton()'>Delete</button>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";

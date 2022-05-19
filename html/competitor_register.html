@@ -32,9 +32,28 @@
       }
     </style>
 
+    <script>
+      function reset() {
+        document.getElementById("firstNameInput").value = "";
+        document.getElementById("lastNameInput").value = "";
+        document.getElementById("nicInput").value = "";
+        document.getElementById("mobileNumberInput").value = "";
+        document.getElementById("ageInput").value = "";
+        document.getElementById("addressInput").value = "";
+        document.getElementById("photoInput").value = "";
+      }
+    </script>
+
     <div id="headerSection">
-      <button id="backBtn" onclick="location.href='../php/view_competitors.php'">Back</button>
-      <button id="logoutBtn" onclick="location.href='../php/login.php'">Logout</button>
+      <button
+        id="backBtn"
+        onclick="location.href='../php/view_competitors.php'"
+      >
+        Back
+      </button>
+      <button id="logoutBtn" onclick="location.href='../php/login.php'">
+        Logout
+      </button>
       <h1>Online Voting System</h1>
     </div>
 
@@ -89,11 +108,16 @@
             <input type="file" id="photoInput" name="photo" />
           </div>
         </center>
-
-        <br /><br />
-        <button id="btnRegister" onclick="location.href='../php/competitor_register.php'">Register</button>
-        <br /><br />
       </form>
+
+      <br /><br />
+      <button
+        id="btnRegister"
+        onclick="location.href='../php/competitor_register.php'"
+      >
+        Register
+      </button>
+      <button id="btnRegister" onclick="reset()">Reset</button>
     </div>
   </body>
 </html>
