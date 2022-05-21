@@ -10,10 +10,10 @@
 
     move_uploaded_file($tmp_name, "../images/$image");
 
-    if ($password == $confpassword) {
+    // if ($password == $confpassword) {
         $insert = mysqli_query($connect, "INSERT INTO admins (username, password, image) VALUES ('$username', '$password', '$image')");
 
-        if ($insert) {
+        /*if ($insert) {
             echo "
                 <script>
                     alert('Registration successfull!!');
@@ -28,15 +28,15 @@
                     window.location = '../html/admin_register.html'
                 </script>
             ";
-        }
-    }
-    else {
-        echo "
-            <script>
-                alert('Confirm password should be equal to password!!');
-                window.location = '../html/admin_register.html'
-            </script>
-        ";
-    }
+        }*/
+    // }
+    // else {
+    //     echo "
+    //         <script>
+    //             alert('Confirm password should be equal to password!!');
+    //             window.location = '../html/admin_register.html'
+    //         </script>
+    //     ";
+    // }
 
 ?>

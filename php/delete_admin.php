@@ -3,7 +3,7 @@
     include("connect.php");
     include("view_admins.php");
 
-    $insert = mysqli_query($connect, "DELETE FROM admin_register WHERE id='$var_id'");
+    $insert = mysqli_query($connect, "DELETE FROM admins WHERE id='$var_id'");
 
     if ($insert) {
         echo "

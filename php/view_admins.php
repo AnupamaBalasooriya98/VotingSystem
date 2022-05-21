@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Online Voting System - View Competitors</title>
+    <title>Online Voting System - View Admins</title>
     <link rel="stylesheet" href="../css/stylesheet.css" />
   </head>
   <body>
@@ -76,6 +76,7 @@
                 <th>Username</th>
                 <th>Password</th>
                 <th>Image</th>
+                <th>Actions</th>
             </tr>
         </thead>";
 
