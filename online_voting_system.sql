@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2022 at 08:53 PM
+-- Generation Time: May 21, 2022 at 06:44 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -25,27 +25,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `competitor_register`
+-- Table structure for table `admins`
 --
 
-CREATE TABLE `competitor_register` (
+CREATE TABLE `admins` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `last_name` varchar(20) NOT NULL,
-  `nic` varchar(12) NOT NULL,
-  `age` int(11) NOT NULL,
-  `mobile_number` int(10) NOT NULL,
-  `home_address` varchar(100) NOT NULL,
-  `dp` varchar(255) NOT NULL
+  `username` varchar(10) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `competitor_register`
+-- Dumping data for table `admins`
 --
 
-INSERT INTO `competitor_register` (`id`, `first_name`, `last_name`, `nic`, `age`, `mobile_number`, `home_address`, `dp`) VALUES
-(4, 'anupama', 'balasooriya', '123456v', 24, 123456, 'jsgdfjsdfkh', ''),
-(11, 'fgdg', 'gjhfg', '23445', 0, 0, '', '92-920036_nature-top-whatsapp-dp.jpg');
+INSERT INTO `admins` (`id`, `username`, `password`, `image`) VALUES
+(1, 'admin', 'admin', '92-920036_nature-top-whatsapp-dp.jpg'),
+(3, '', '', ''),
+(4, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -71,9 +68,9 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 --
 
 --
--- Indexes for table `competitor_register`
+-- Indexes for table `admins`
 --
-ALTER TABLE `competitor_register`
+ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -87,10 +84,10 @@ ALTER TABLE `login`
 --
 
 --
--- AUTO_INCREMENT for table `competitor_register`
+-- AUTO_INCREMENT for table `admins`
 --
-ALTER TABLE `competitor_register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `login`

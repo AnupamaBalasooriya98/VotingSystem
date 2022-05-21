@@ -33,54 +33,43 @@
     </style>
 
     <div id="headerSection">
-      <button id="backBtn" onclick="location.href='../php/view_competitors.php'">Back</button>
-      <button id="logoutBtn" onclick="location.href='../php/login.php'">Logout</button>
+      <button id="backBtn" onclick="location.href='../php/view_admins.php'">
+        Back
+      </button>
+      <button id="logoutBtn" onclick="location.href='../php/login.php'">
+        Logout
+      </button>
       <h1>Online Voting System</h1>
     </div>
 
     <hr />
 
     <div id="bodySection">
-      <h2>Edit Competitor</h2>
+      <h2>Edit Admin</h2>
       <br /><br />
       <form
-        action="../php/edit_competitor.php"
+        action="../php/admin_register.php"
         method="POST"
         enctype="multipart/form-data"
       >
         <input
           type="text"
-          name="firstName"
+          name="username"
           id="firstNameInput"
-          placeholder="Enter first name"
+          placeholder="Enter username"
         />
         <input
-          type="text"
-          name="lastName"
-          id="lastNameInput"
-          placeholder="Enter last name"
-        />
-        <br /><br />
-        <input
-          type="text"
-          id="nicInput"
-          name="nic"
-          placeholder="Enter NIC number"
-        />
-        <input type="text" id="ageInput" name="age" placeholder="Enter age" />
-        <br /><br />
-        <input
-          type="text"
-          id="mobileNumberInput"
-          name="mobileNumber"
-          placeholder="Enter mobile number"
+          type="password"
+          name="password"
+          id="passwprd"
+          placeholder="Enter password"
         />
         <br /><br />
         <input
-          type="text"
-          id="addressInput"
-          name="address"
-          placeholder="Enter home address"
+          type="password"
+          id="confPassword"
+          name="confPassword"
+          placeholder="Confirm password"
         />
         <br /><br />
 
@@ -89,11 +78,12 @@
             <input type="file" id="photoInput" name="photo" />
           </div>
         </center>
-
-        <br /><br />
-        <button id="btnRegister" onclick="location.href='../php/edit_competitor.php'">Save</button>
-        <br /><br />
       </form>
+
+      <button id="btnRegister" onclick="location.href='../php/edit_admin.php'">
+        Save
+      </button>
+      <br /><br />
     </div>
   </body>
 </html>

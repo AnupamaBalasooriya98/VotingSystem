@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Online Voting System - Register Competitor</title>
+    <title>Online Voting System - Register Admin</title>
     <link rel="stylesheet" href="../css/stylesheet.css" />
     <script></script>
   </head>
@@ -34,21 +34,15 @@
 
     <script>
       function reset() {
-        document.getElementById("firstNameInput").value = "";
-        document.getElementById("lastNameInput").value = "";
-        document.getElementById("nicInput").value = "";
-        document.getElementById("mobileNumberInput").value = "";
-        document.getElementById("ageInput").value = "";
-        document.getElementById("addressInput").value = "";
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("confPassword").value = "";
         document.getElementById("photoInput").value = "";
       }
     </script>
 
     <div id="headerSection">
-      <button
-        id="backBtn"
-        onclick="location.href='../php/view_competitors.php'"
-      >
+      <button id="backBtn" onclick="location.href='../php/view_admins.php'">
         Back
       </button>
       <button id="logoutBtn" onclick="location.href='../php/login.php'">
@@ -60,46 +54,31 @@
     <hr />
 
     <div id="bodySection">
-      <h2>Register Competitor</h2>
+      <h2>Register Admin</h2>
       <br /><br />
       <form
-        action="../php/competitor_register.php"
+        action="../php/admin_register.php"
         method="POST"
         enctype="multipart/form-data"
       >
         <input
           type="text"
-          name="firstName"
-          id="firstNameInput"
-          placeholder="Enter first name"
+          name="username"
+          id="username"
+          placeholder="Enter username"
         />
         <input
-          type="text"
-          name="lastName"
-          id="lastNameInput"
-          placeholder="Enter last name"
-        />
-        <br /><br />
-        <input
-          type="text"
-          id="nicInput"
-          name="nic"
-          placeholder="Enter NIC number"
-        />
-        <input type="text" id="ageInput" name="age" placeholder="Enter age" />
-        <br /><br />
-        <input
-          type="text"
-          id="mobileNumberInput"
-          name="mobileNumber"
-          placeholder="Enter mobile number"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
         />
         <br /><br />
         <input
-          type="text"
-          id="addressInput"
-          name="address"
-          placeholder="Enter home address"
+          type="password"
+          id="confPassword"
+          name="confPassword"
+          placeholder="Confirm password"
         />
         <br /><br />
 
@@ -113,7 +92,7 @@
       <br /><br />
       <button
         id="btnRegister"
-        onclick="location.href='../php/competitor_register.php'"
+        onclick="location.href='../php/admin_register.php'"
       >
         Register
       </button>

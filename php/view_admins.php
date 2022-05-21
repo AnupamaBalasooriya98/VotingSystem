@@ -48,38 +48,34 @@
 
     <div id="bodySection">
       <br /><br />
-      <button id="addCompetitorBtn"  onclick="location.href='../html/competitor_register.html'">
-        Add Competitor
+      <button id="addCompetitorBtn"  onclick="location.href='../html/admin_register.html'">
+        Add Admin
         </button>
     </div>
     
     <script>
       function editButton() {
-        location.href='../html/edit_competitor.html';
+        location.href='../html/edit_admin.html';
       }
 
       function deleteButton() {
-        location.href='../php/delete_competitor.php';
+        location.href='../php/delete_admin.php';
       }
     </script>
 
     <?php
         include("connect.php");
         
-        $result = mysqli_query($connect, "SELECT * FROM competitor_register");
+        $result = mysqli_query($connect, "SELECT * FROM admins");
         $var_id = mysqli_fetch_array($result)['id'];
 
         echo "<table border='1px solid black' align='center'>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-                <th>Mobile Number</th>
-                <th>Home Address</th>
+                <th>Username</th>
+                <th>Password</th>
                 <th>Image</th>
-                <th>Actions</th>
             </tr>
         </thead>";
 
@@ -88,12 +84,9 @@
             echo "<tbody>";
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
-            echo "<td>" . $row['first_name'] . "</td>";
-            echo "<td>" . $row['last_name'] . "</td>";
-            echo "<td>" . $row['age'] . "</td>";
-            echo "<td>" . $row['mobile_number'] . "</td>";
-            echo "<td>" . $row['home_address'] . "</td>";
-            echo "<td><img src='../images/" . $row['dp'] . "' width='50' height='50' class='center'></td>";
+            echo "<td>" . $row['username'] . "</td>";
+            echo "<td>" . $row['password'] . "</td>";
+            echo "<td><img src='../images/" . $row['image'] . "' width='50' height='50' class='center'></td>";
             echo "<td>" . "<button type='submit' id='editBtn' onclick='editButton()'>Edit</button>" . "<button type='submit' id='deleteBtn' onclick='deleteButton()'>Delete</button>" . "</td>";
             echo "</tr>";
             echo "</tbody>";

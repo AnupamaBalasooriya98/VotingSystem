@@ -1,15 +1,15 @@
 <?php
 
     include("connect.php");
-    include("view_competitors.php");
+    include("view_admins.php");
 
-    $insert = mysqli_query($connect, "DELETE FROM competitor_register WHERE id='$var_id'");
+    $insert = mysqli_query($connect, "DELETE FROM admin_register WHERE id='$var_id'");
 
     if ($insert) {
         echo "
             <script>
                 alert('Delete successfull!!');
-                window.location = '../php/view_competitors.php'
+                window.location = '../php/view_admins.php'
             </script>
         ";
     }
@@ -17,7 +17,7 @@
         echo "
             <script>
                 alert('Error occured!!');
-                window.location = '../php/view_competitors.php'
+                window.location = '../php/view_admins.php'
             </script>
         ";
     }
