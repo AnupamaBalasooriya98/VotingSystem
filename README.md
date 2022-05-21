@@ -1,10 +1,17 @@
 # Online Voting System for Reality Shows
 
-This project has been done by the following named students for Internet and Web Technologies module in 1st year 2nd semester of SLIIT B. Sc. (IT) degree program. 
+This project has been for the Internet and Web Technologies module in 1st year 2nd semester of SLIIT B. Sc. (IT) degree program. 
 <br><br>
-<!--Balasooriya S. A. - IT17184922 <br>
-K. K. A. E. N. Aththanayake - IT19242200 <br>
-K. M. R. A. B. Alahakoon - IT19170008 <br>
-Y. G. A. S. Karunarathna - IT19143064 <br>
-<br><br>-->
 Implemented using: HTML, CSS, JS, PHP
+
+Instructions to run the project:
+1. Download and install 'XAMPP'
+2. Download the project file and copy it into the 'xampp/htdocs' folder
+3. Start 'Apache' and 'MySQL' modules in XAMPP control panel
+4. Go to 'Admin' of MySQL module (http://localhost/phpmyadmin) and create new database with the name 'online_voting_system'
+5. Then import the SQL database file in the repository
+6. You can access the website by entering 'http://localhost/VotingSystem/php/login.php#' url
+
+* Admin credentials:
+  - Username: admin
+  - Password: admin
