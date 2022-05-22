@@ -57,7 +57,7 @@
         <br /><br />
         New user? Register Here
         <br />
-        <a href="#">Voter</a><br />
+        <a href="../php/index.php">Voter</a><br />
       </form>
     </div>
     
