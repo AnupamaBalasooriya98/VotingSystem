@@ -46,11 +46,38 @@ if(isset($_POST['submit'])) {
 
 <body>
 
-
+<style>
+    #backBtn {
+      background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+        float: left;
+    }
+    #logoutBtn {
+      background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+        float: right;
+    }
+  </style>
 
 </div>
 </div>
   <div class="content">
+  <button id="backBtn" onclick="location.href='../html/admin_dashboard.html'">
+        Back
+      </button>
+      <button id="logoutBtn" onclick="location.href='../php/login.php'">
+        Logout
+      </button>
   <form method= "post">
   <div class="form-group">
     <label style="color:black" >First Name</label>

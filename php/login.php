@@ -28,7 +28,7 @@
    </head>
    
    <div id="headerSection">
-      <h1>Oneline Voting System</h1>
+      <h1>Online Voting System</h1>
     </div>
 
     <hr />

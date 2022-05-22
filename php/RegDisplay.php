@@ -14,9 +14,37 @@ include 'connect.php';
 <link rel="stylesheet" href="../css/Display.css">
 </head>
 <header>
+  <style>
+    #backBtn {
+      background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+        float: left;
+    }
+    #logoutBtn {
+      background-color: #4CAF50;
+   color: white;
+   padding: 14px 20px;
+   margin: 8px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+        float: right;
+    }
+  </style>
  <div class="fixed-header">
  <img src="img/logo.png" style="width:7%">
         <div class="container">
+        <button id="backBtn" onclick="location.href='../html/admin_dashboard.html'">
+        Back
+      </button>
+      <button id="logoutBtn" onclick="location.href='../php/login.php'">
+        Logout
+      </button>
         </div>
     </div>
        

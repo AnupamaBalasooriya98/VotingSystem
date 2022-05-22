@@ -13,7 +13,7 @@ include_once '../php/connect.php';
     <body>  
         
         <div class="navbar">
-            <a href="#home">Home</a>
+            <a href="../php/login/php">Home</a>
             <div class="subnav">
               <button class="subnavbtn">Voting <i class="dropdown"></i></button>
               <div class="subnav-content">
