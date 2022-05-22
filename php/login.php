@@ -15,7 +15,7 @@
             header("location: ../html/admin_dashboard.html");
         }
         else {
-            header("location: ../");
+            header("location: ../php/voting.php");
         }
    }
 ?>
