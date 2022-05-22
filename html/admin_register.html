@@ -81,22 +81,27 @@
           placeholder="Confirm password"
         />
         <br /><br />
+        <select type="text" id="type" name="type" placeholder="Select type">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <br /><br />
 
         <center>
           <div id="imgPart">
             <input type="file" id="photo" name="photo" />
           </div>
         </center>
-      </form>
 
-      <br /><br />
-      <button
-        id="btnRegister"
-        onclick="location.href='../php/admin_register.php'"
-      >
-        Register
-      </button>
-      <button id="btnRegister" onclick="reset()">Reset</button>
+        <br /><br />
+        <button
+          id="btnRegister"
+          onclick="location.href='../php/admin_register.php'"
+        >
+          Register
+        </button>
+        <button id="btnRegister" onclick="reset()">Reset</button>
+      </form>
     </div>
   </body>
 </html>
