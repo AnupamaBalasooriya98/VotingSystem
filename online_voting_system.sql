@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 11:13 AM
+-- Generation Time: May 22, 2022 at 02:28 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -82,7 +82,9 @@ INSERT INTO `login` (`id`, `username`, `password`, `type`) VALUES
 (3, '', '', 'admin'),
 (4, 'admin', 'admin', 'admin'),
 (5, '123456', '123456', 'admin'),
-(6, 'admin', 'admin', '');
+(6, 'admin', 'admin', ''),
+(7, 'user', 'user', 'user'),
+(8, 'user', 'user', 'user');
 
 -- --------------------------------------------------------
 
@@ -103,6 +105,28 @@ CREATE TABLE `reg` (
   `JobTitle` varchar(45) NOT NULL,
   `Password` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `singers`
+--
+
+CREATE TABLE `singers` (
+  `name` varchar(100) NOT NULL,
+  `votes` int(11) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `singers`
+--
+
+INSERT INTO `singers` (`name`, `votes`, `status`) VALUES
+('kamal', 4, 0),
+('Vimal', 12, 0),
+('Pawan', 16, 0),
+('Cathushka', 16, 1);
 
 --
 -- Indexes for dumped tables
@@ -152,13 +176,13 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `reg`
 --
 ALTER TABLE `reg`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
