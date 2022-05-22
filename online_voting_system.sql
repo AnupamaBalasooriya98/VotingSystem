@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 03:36 PM
+-- Generation Time: May 22, 2022 at 05:06 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -46,6 +46,30 @@ INSERT INTO `admins` (`id`, `username`, `password`, `image`) VALUES
 (35, 'admin', 'admin', 'Natsume-ans-Mikan-Sakura-natsume-hyuuga-13321757-400-250.jpg'),
 (36, '123456', '123456', '92-920036_nature-top-whatsapp-dp.jpg'),
 (37, 'admin', 'admin', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comtable`
+--
+
+CREATE TABLE `comtable` (
+  `ID` int(255) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `nic` varchar(15) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `party` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comtable`
+--
+
+INSERT INTO `comtable` (`ID`, `firstName`, `lastName`, `nic`, `email`, `party`) VALUES
+(16, 'sadaru', ' kuruppu', ' 1234868909V', '  sadaru@gmail.com', ' CRC'),
+(21, 'sadaru', ' kuruppu', ' 1234868909V', '  sadaru@gmail.com', ' CRC'),
+(22, 'sadaru', ' kuruppu', ' 1234868909V', '  sadaru@gmail.com', ' CRC');
 
 -- --------------------------------------------------------
 
@@ -273,6 +297,12 @@ ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `comtable`
+--
+ALTER TABLE `comtable`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -330,6 +360,12 @@ ALTER TABLE `tbpositions`
 --
 ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `comtable`
+--
+ALTER TABLE `comtable`
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `contact`
